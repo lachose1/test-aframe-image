@@ -8,7 +8,7 @@
 <!-- ar.js -->
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-nft.js">
 
-<script>THREEx.ArToolkitContext.baseURL = '../test-aframe-image/'</script>
+<script>THREEx.ArToolkitContext.baseURL = '../'</script>
 
 <body style='position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin : 0px; overflow: hidden;'>
     <style>
@@ -154,7 +154,7 @@
         // init controls for camera
         var markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
             type : 'nft',
-            descriptorsUrl : 'assets/markers/vuse-marker/Vuse_alto_blue_1024x1024',
+            descriptorsUrl : 'test-aframe-image/assets/markers/vuse-marker/Vuse_alto_blue_1024x1024',
             changeMatrixMode: 'cameraTransformMatrix'
         })
 
@@ -170,7 +170,7 @@
         var threeGLTFLoader = new THREE.GLTFLoader();
         var model;
 
-        threeGLTFLoader.load("assets/3d/cloud.glb", function (gltf) {
+        threeGLTFLoader.load("test-aframe-image/assets/3d/cloud.glb", function (gltf) {
             model = gltf.scene.children[0];
             model.name = 'Flamingo';
 
